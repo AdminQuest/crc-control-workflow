@@ -9,53 +9,79 @@
 <body>
   <header>
     <h1>CRC Control Workflow</h1>
-    <p>Chaîne méthodologique pour conduire un contrôle CRC : cadrer, instruire, structurer les constats, préparer la rédaction, tester la robustesse et traiter la contradiction.</p>
+    <p>Portail de méthode pour conduire un contrôle CRC, rattaché aux grandes étapes de la procédure d’instruction.</p>
   </header>
   <nav>
     <a class="active" href="index.html">Accueil</a>
     <a href="web/00-socle.html">Socle</a>
     <a href="web/01-cadrage.html">Cadrage</a>
-    <a href="web/02-questionnaires.html">Questionnaires</a>
-    <a href="web/03-instruction-rag.html">Instruction RAG</a>
-    <a href="web/04-documents-maitres.html">Documents maîtres</a>
-    <a href="web/05-constats-arbitrage.html">Constats</a>
-    <a href="web/06-integration-prompt-engine.html">Prompt-engine</a>
-    <a href="web/07-qualite-delibere.html">Qualité</a>
+    <a href="web/02-questionnaires.html">Instruction</a>
+    <a href="web/05-constats-arbitrage.html">Rédaction</a>
     <a href="web/08-contradiction-riod.html">Contradiction</a>
     <a href="web/09-capitalisation.html">Capitalisation</a>
     <a href="web/taches.html">Tâches</a>
-    <a href="web/taches-detail.html">Tâches détaillées</a>
-    <a href="web/taches-suivi.html">Suivi global</a>
     <a href="web/tests-t01.html">Test T01</a>
   </nav>
   <main>
     <section class="card">
       <div class="kicker">Principe</div>
-      <h2>Produire un rapport à partir de ce qui doit être démontré</h2>
-      <p>Le dépôt distingue la matière probatoire, l’analyse, l’arbitrage des constats et la rédaction. Les documents maîtres restent le socle analytique ; seuls les constats significatifs, prouvés, illustrables et domiciliés alimentent le rapport.</p>
+      <h2>Un portail organisé par grandes étapes</h2>
+      <p>Le dépôt distingue le socle méthodologique, le cadrage, l’instruction, la rédaction/arbitrage, la contradiction et la capitalisation. Les modules techniques sont rattachés à ces étapes pour éviter une navigation par dossiers isolés.</p>
     </section>
 
-    <section class="grid">
-      <a class="module-link" href="web/00-socle.html"><div class="card"><span class="badge">00</span><h3>Socle</h3><p>Objets communs, identifiants, registres, niveaux de preuve.</p></div></a>
-      <a class="module-link" href="web/01-cadrage.html"><div class="card"><span class="badge">01</span><h3>Cadrage</h3><p>Risques, questions de contrôle, fiche de cadrage dynamique.</p></div></a>
-      <a class="module-link" href="web/02-questionnaires.html"><div class="card"><span class="badge">02</span><h3>Questionnaires</h3><p>Questionnaire n° 1 et questionnaires complémentaires rattachés au cadrage.</p></div></a>
-      <a class="module-link" href="web/03-instruction-rag.html"><div class="card"><span class="badge">03</span><h3>Instruction RAG</h3><p>Atomisation des sources, registres et base de connaissance.</p></div></a>
-      <a class="module-link" href="web/04-documents-maitres.html"><div class="card"><span class="badge">04</span><h3>Documents maîtres</h3><p>Analyses thématiques alimentées par les atomes probatoires.</p></div></a>
-      <a class="module-link" href="web/05-constats-arbitrage.html"><div class="card"><span class="badge">05</span><h3>Constats-arbitrage</h3><p>Tri, significativité, limites probatoires, domiciliation.</p></div></a>
-      <a class="module-link" href="web/06-integration-prompt-engine.html"><div class="card"><span class="badge">06</span><h3>Intégration prompt-engine</h3><p>Paquets de rédaction propres à transmettre à crc-prompt-engine.</p></div></a>
-      <a class="module-link" href="web/07-qualite-delibere.html"><div class="card"><span class="badge">07</span><h3>Qualité / délibéré</h3><p>Audits pré-dépôt, preuves, redites, recommandations, pré-délibéré.</p></div></a>
-      <a class="module-link" href="web/08-contradiction-riod.html"><div class="card"><span class="badge">08</span><h3>Contradiction / RIOD</h3><p>Effet utile des réponses, matrice ROP/ROD, RIOD simplifié.</p></div></a>
-      <a class="module-link" href="web/09-capitalisation.html"><div class="card"><span class="badge">09</span><h3>Capitalisation</h3><p>Retours d’expérience, formulations robustes, erreurs fréquentes.</p></div></a>
-      <a class="module-link" href="web/taches.html"><div class="card"><span class="badge">T</span><h3>Synthèse des tâches</h3><p>Vue transversale des tâches et des livrables confiables au vérificateur.</p></div></a>
-      <a class="module-link" href="web/taches-detail.html"><div class="card"><span class="badge">TD</span><h3>Tâches détaillées</h3><p>Toutes les tâches proposées étape par étape, en HTML.</p></div></a>
-      <a class="module-link" href="web/taches-suivi.html"><div class="card"><span class="badge">SG</span><h3>Suivi global</h3><p>Tableau HTML de suivi opérationnel et consignes d’ajout de tâches.</p></div></a>
+    <section class="card stage stage-socle">
+      <h2><span class="stage-label">Socle</span> Référentiel commun</h2>
+      <div class="grid">
+        <a class="module-link" href="web/00-socle.html"><div class="card"><span class="badge socle">00</span><h3>Socle</h3><p>Objets communs, identifiants, registres, niveaux de preuve.</p></div></a>
+      </div>
+    </section>
+
+    <section class="card stage stage-cadrage">
+      <h2><span class="stage-label">Cadrage</span> Préparer le contrôle</h2>
+      <div class="grid">
+        <a class="module-link" href="web/01-cadrage.html"><div class="card"><span class="badge cadrage">01</span><h3>Cadrage</h3><p>Risques, questions de contrôle, fiche de cadrage dynamique.</p></div></a>
+        <a class="module-link" href="web/tests-t01.html"><div class="card"><span class="badge cadrage">T01</span><h3>Test cadrage</h3><p>Plan de contrôle → risques → questions de contrôle → fiche de cadrage → questionnaire n° 1.</p></div></a>
+      </div>
+    </section>
+
+    <section class="card stage stage-instruction">
+      <h2><span class="stage-label">Instruction</span> Collecter, classer, analyser</h2>
+      <div class="grid">
+        <a class="module-link" href="web/02-questionnaires.html"><div class="card"><span class="badge instruction">02</span><h3>Questionnaires</h3><p>Questionnaire n° 1, questionnaires complémentaires, suivi des réponses.</p></div></a>
+        <a class="module-link" href="web/03-instruction-rag.html"><div class="card"><span class="badge instruction">03</span><h3>Instruction RAG</h3><p>Sources, atomes de preuve, registres, base de connaissance.</p></div></a>
+        <a class="module-link" href="web/04-documents-maitres.html"><div class="card"><span class="badge instruction">04</span><h3>Documents maîtres</h3><p>Analyses thématiques, fiches d’analyse, pièces manquantes.</p></div></a>
+      </div>
+    </section>
+
+    <section class="card stage stage-redaction">
+      <h2><span class="stage-label">Rédaction</span> Arbitrer, rédiger, éprouver</h2>
+      <div class="grid">
+        <a class="module-link" href="web/05-constats-arbitrage.html"><div class="card"><span class="badge redaction">05</span><h3>Constats-arbitrage</h3><p>Significativité, preuves, illustrations, limites probatoires, domiciliation.</p></div></a>
+        <a class="module-link" href="web/06-integration-prompt-engine.html"><div class="card"><span class="badge redaction">06</span><h3>Intégration prompt-engine</h3><p>Paquets de rédaction propres à transmettre à crc-prompt-engine.</p></div></a>
+        <a class="module-link" href="web/07-qualite-delibere.html"><div class="card"><span class="badge redaction">07</span><h3>Qualité / délibéré</h3><p>Audits pré-dépôt, preuves, redites, recommandations, simulation de délibéré.</p></div></a>
+      </div>
+    </section>
+
+    <section class="card stage stage-contradiction">
+      <h2><span class="stage-label">Contradiction</span> Traiter les réponses et préparer le RIOD</h2>
+      <div class="grid">
+        <a class="module-link" href="web/08-contradiction-riod.html"><div class="card"><span class="badge contradiction">08</span><h3>Contradiction / RIOD</h3><p>Effet utile des réponses, matrice de contradiction, RIOD simplifié, passage ROP/ROD.</p></div></a>
+      </div>
+    </section>
+
+    <section class="card stage stage-capitalisation">
+      <h2><span class="stage-label">Capitalisation</span> Tirer les enseignements du contrôle</h2>
+      <div class="grid">
+        <a class="module-link" href="web/09-capitalisation.html"><div class="card"><span class="badge capitalisation">09</span><h3>Capitalisation</h3><p>Retours d’expérience, formulations robustes, erreurs fréquentes, amélioration des prompts.</p></div></a>
+      </div>
     </section>
 
     <section class="card">
-      <div class="kicker">Premier usage testable</div>
-      <h2>Test T01 — Cadrage et questionnaire</h2>
-      <p>Le premier test permet de coller un plan de contrôle, une lettre d’ouverture ou un descriptif de contrôle, puis de générer successivement les risques, les questions de contrôle, la fiche de cadrage et le questionnaire n° 1.</p>
-      <p><a href="web/tests-t01.html">Ouvrir le test T01</a></p>
+      <h2>Suivi des tâches</h2>
+      <p>Les trois anciennes entrées T, TD et SG sont regroupées dans un même ensemble.</p>
+      <div class="grid">
+        <a class="module-link" href="web/taches.html"><div class="card"><span class="badge">T</span><h3>Espace tâches</h3><p>Synthèse, tâches détaillées et suivi local depuis un même point d’entrée.</p></div></a>
+      </div>
     </section>
   </main>
   <footer>CRC Control Workflow — dépôt méthodologique distinct de crc-prompt-engine.</footer>
