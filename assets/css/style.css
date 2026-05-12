@@ -7,6 +7,12 @@
   --accent: #384c6b;
   --accent-2: #eef2f7;
   --code: #0f172a;
+  --c-socle: #394867;
+  --c-cadrage: #2f6f73;
+  --c-instruction: #8a5a22;
+  --c-redaction: #6b4c9a;
+  --c-contradiction: #9a3f3f;
+  --c-capitalisation: #4f6f35;
 }
 
 * { box-sizing: border-box; }
@@ -70,6 +76,39 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 14px;
 }
+
+.stage {
+  border-left: 7px solid var(--accent);
+}
+
+.stage h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stage-socle { border-left-color: var(--c-socle); }
+.stage-cadrage { border-left-color: var(--c-cadrage); }
+.stage-instruction { border-left-color: var(--c-instruction); }
+.stage-redaction { border-left-color: var(--c-redaction); }
+.stage-contradiction { border-left-color: var(--c-contradiction); }
+.stage-capitalisation { border-left-color: var(--c-capitalisation); }
+
+.stage-label {
+  display: inline-block;
+  color: white;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.stage-socle .stage-label, .socle { background: var(--c-socle); }
+.stage-cadrage .stage-label, .cadrage { background: var(--c-cadrage); }
+.stage-instruction .stage-label, .instruction { background: var(--c-instruction); }
+.stage-redaction .stage-label, .redaction { background: var(--c-redaction); }
+.stage-contradiction .stage-label, .contradiction { background: var(--c-contradiction); }
+.stage-capitalisation .stage-label, .capitalisation { background: var(--c-capitalisation); }
 
 h2 { margin-top: 0; color: var(--accent); }
 h3 { margin-bottom: 8px; }
@@ -143,6 +182,10 @@ button.copy:hover { opacity: .9; }
   border-radius: 999px;
   font-size: .82rem;
   margin-right: 5px;
+}
+
+.badge.socle, .badge.cadrage, .badge.instruction, .badge.redaction, .badge.contradiction, .badge.capitalisation {
+  color: white;
 }
 
 footer {
