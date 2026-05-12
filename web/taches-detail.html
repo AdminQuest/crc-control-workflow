@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tâches détaillées</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header>
+  <h1>Tâches détaillées par étape</h1>
+  <p>Tâches proposées pour le vérificateur à chaque étape du workflow. Le rapporteur conserve les arbitrages, qualifications, choix de plan et rédaction finale.</p>
+</header>
+<nav>
+  <a href="../index.html">Accueil</a>
+  <a href="taches.html">Synthèse tâches</a>
+  <a class="active" href="taches-detail.html">Tâches détaillées</a>
+  <a href="taches-suivi.html">Suivi global</a>
+  <a href="tests-t01.html">Test T01</a>
+</nav>
+<main>
+<section class="card">
+  <h2>Principe</h2>
+  <p>Les tâches ci-dessous sont des tâches types. Pour un contrôle réel, il faut copier les tâches utiles dans la page de suivi global, puis compléter les statuts, échéances et commentaires.</p>
+</section>
+
+<section class="card">
+  <h2>01 — Cadrage</h2>
+  <table><tr><th>ID</th><th>Tâche vérificateur</th><th>Livrable</th><th>Contrôle qualité</th><th>Priorité</th></tr>
+  <tr><td>T-01-001</td><td>Recenser les pièces de cadrage disponibles</td><td>Liste des pièces disponibles et manquantes</td><td>Chaque pièce est localisée et datée</td><td>haute</td></tr>
+  <tr><td>T-01-002</td><td>Préparer la fiche d’identité de l’organisme</td><td>Tableau identité organisme</td><td>Cohérence SIRET, population, budgets, ordonnateurs</td><td>normale</td></tr>
+  <tr><td>T-01-003</td><td>Extraire les éléments du précédent contrôle</td><td>Tableau recommandations / suites apparentes</td><td>Distinguer recommandation, observation et suite déclarée</td><td>normale</td></tr>
+  <tr><td>T-01-004</td><td>Préparer les premiers agrégats financiers</td><td>Tableau synthétique BP/BA sur la période</td><td>Recalcul des principaux ratios</td><td>haute</td></tr>
+  <tr><td>T-01-005</td><td>Dresser une première liste des acteurs et instances</td><td>Registre acteurs / instances</td><td>Vérifier fonctions, dates, mandats</td><td>normale</td></tr>
+  <tr><td>T-01-006</td><td>Signaler les lacunes documentaires initiales</td><td>Liste courte des pièces à demander dans Q1</td><td>Chaque lacune est rattachée à une question de contrôle</td><td>haute</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>02 — Questionnaires</h2>
+  <table><tr><th>ID</th><th>Tâche vérificateur</th><th>Livrable</th><th>Contrôle qualité</th><th>Priorité</th></tr>
+  <tr><td>T-02-001</td><td>Transformer les lacunes documentaires en demandes de pièces</td><td>Tableau demandes de pièces</td><td>Chaque demande est rattachée à une QC</td><td>haute</td></tr>
+  <tr><td>T-02-002</td><td>Vérifier les pièces déjà disponibles</td><td>Liste des pièces à ne pas redemander</td><td>Éviter les doublons</td><td>haute</td></tr>
+  <tr><td>T-02-003</td><td>Proposer les formats de réponse attendus</td><td>Tableau formats attendus</td><td>Format exploitable : xlsx, pdf, tableau, note</td><td>normale</td></tr>
+  <tr><td>T-02-004</td><td>Préparer la table de suivi du questionnaire</td><td>Table de suivi Q1 prête à remplir</td><td>Toutes les questions ont un ID</td><td>normale</td></tr>
+  <tr><td>T-02-005</td><td>Contrôler la complétude des réponses reçues</td><td>Tableau complétude / relances</td><td>Distinguer complet, partiel, absent, inexploitable</td><td>haute</td></tr>
+  <tr><td>T-02-006</td><td>Préparer les relances documentaires</td><td>Projet de liste de relances</td><td>Relance justifiée par une lacune précise</td><td>normale</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>03 — Instruction RAG</h2>
+  <table><tr><th>ID</th><th>Tâche vérificateur</th><th>Livrable</th><th>Contrôle qualité</th><th>Priorité</th></tr>
+  <tr><td>T-03-001</td><td>Classer les sources reçues</td><td>Registre des sources SRC</td><td>Chaque source a un ID, une date, une origine</td><td>haute</td></tr>
+  <tr><td>T-03-002</td><td>Extraire les dates structurantes</td><td>Registre des dates</td><td>Chaque date renvoie à une source</td><td>normale</td></tr>
+  <tr><td>T-03-003</td><td>Extraire les montants significatifs</td><td>Registre des montants</td><td>Montants rapprochés des pièces sources</td><td>haute</td></tr>
+  <tr><td>T-03-004</td><td>Extraire les acteurs et fonctions</td><td>Registre personnes / fonctions</td><td>Vérifier dates de fonction et qualité juridique</td><td>normale</td></tr>
+  <tr><td>T-03-005</td><td>Produire les premiers atomes factuels</td><td>Table ATOM initiale</td><td>Distinguer fait, déclaration, analyse</td><td>haute</td></tr>
+  <tr><td>T-03-006</td><td>Identifier les incohérences ou lacunes entre sources</td><td>Liste des incohérences / lacunes</td><td>Chaque incohérence est localisée</td><td>normale</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>04 — Documents maîtres</h2>
+  <table><tr><th>ID</th><th>Tâche vérificateur</th><th>Livrable</th><th>Contrôle qualité</th><th>Priorité</th></tr>
+  <tr><td>T-04-001</td><td>Préparer l’alimentation factuelle des documents maîtres</td><td>Tableau atomes → DM</td><td>Chaque atome est rattaché à un DM</td><td>haute</td></tr>
+  <tr><td>T-04-002</td><td>Produire les tableaux financiers de base</td><td>Tableaux BP/BA/consolidé</td><td>Recalculs et contrôles de cohérence</td><td>haute</td></tr>
+  <tr><td>T-04-003</td><td>Préparer les chronologies par thème</td><td>Chronologies datées</td><td>Chaque événement renvoie à une source</td><td>normale</td></tr>
+  <tr><td>T-04-004</td><td>Lister les pièces manquantes par DM</td><td>Liste des pièces manquantes</td><td>Chaque pièce manquante est rattachée à une question de contrôle</td><td>haute</td></tr>
+  <tr><td>T-04-005</td><td>Préparer les annexes probatoires potentielles</td><td>Liste des tableaux/annexes possibles</td><td>Distinguer annexe utile et stockage documentaire</td><td>normale</td></tr>
+  <tr><td>T-04-006</td><td>Contrôler la distinction faits / déclarations / analyse</td><td>Liste des passages à qualifier</td><td>Signaler les assertions non sourcées</td><td>haute</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>05 — Constats-arbitrage</h2>
+  <table><tr><th>ID</th><th>Tâche vérificateur</th><th>Livrable</th><th>Contrôle qualité</th><th>Priorité</th></tr>
+  <tr><td>T-05-001</td><td>Préparer la liste brute des pistes de constats</td><td>Tableau des pistes issues des DM</td><td>Chaque piste renvoie à une source ou un atome</td><td>haute</td></tr>
+  <tr><td>T-05-002</td><td>Vérifier les preuves principales de chaque piste</td><td>Tableau pistes / preuves</td><td>Identifier preuve forte, moyenne, faible, déclarative</td><td>haute</td></tr>
+  <tr><td>T-05-003</td><td>Proposer les illustrations disponibles</td><td>Liste chiffres, exemples, tableaux, dates</td><td>Chaque illustration est localisée</td><td>haute</td></tr>
+  <tr><td>T-05-004</td><td>Repérer les redites potentielles entre pistes</td><td>Tableau des doublons / recouvrements</td><td>Proposer un domicile principal sans trancher l’angle</td><td>normale</td></tr>
+  <tr><td>T-05-005</td><td>Signaler les limites probatoires</td><td>Liste des constats fragiles</td><td>Distinguer absence de preuve et preuve contraire</td><td>haute</td></tr>
+  <tr><td>T-05-006</td><td>Préparer la matrice de constats</td><td>Matrice préremplie</td><td>Statut provisoire : garder, compléter, réduire, abandon possible</td><td>normale</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>06 — Intégration prompt-engine</h2>
+  <table><tr><th>ID</th><th>Tâche vérificateur</th><th>Livrable</th><th>Contrôle qualité</th><th>Priorité</th></tr>
+  <tr><td>T-06-001</td><td>Préparer les paquets de rédaction par partie</td><td>Paquets de rédaction préremplis</td><td>Chaque constat retenu figure dans un seul paquet</td><td>haute</td></tr>
+  <tr><td>T-06-002</td><td>Vérifier les éléments à ne pas reprendre</td><td>Liste d’exclusions par paquet</td><td>Aucun élément abandonné ne doit réapparaître</td><td>haute</td></tr>
+  <tr><td>T-06-003</td><td>Contrôler les illustrations obligatoires</td><td>Tableau constats / illustrations</td><td>Chaque illustration est localisée</td><td>haute</td></tr>
+  <tr><td>T-06-004</td><td>Préparer les annexes ou tableaux à transmettre</td><td>Liste des annexes utiles</td><td>Distinguer corps, annexe, DLRé</td><td>normale</td></tr>
+  <tr><td>T-06-005</td><td>Vérifier la cohérence des identifiants</td><td>Table de correspondance CONST / OBS / paquet</td><td>Aucun constat orphelin</td><td>normale</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>07 — Qualité / délibéré</h2>
+  <table><tr><th>ID</th><th>Tâche vérificateur</th><th>Livrable</th><th>Contrôle qualité</th><th>Priorité</th></tr>
+  <tr><td>T-07-001</td><td>Contrôler la présence des preuves dans le DLRé</td><td>Tableau OBS / pièce DLRé</td><td>Chaque observation significative a une pièce localisée</td><td>haute</td></tr>
+  <tr><td>T-07-002</td><td>Vérifier les illustrations dans le corps du rapport</td><td>Tableau paragraphes / illustrations</td><td>Identifier les paragraphes abstraits</td><td>haute</td></tr>
+  <tr><td>T-07-003</td><td>Repérer les redites</td><td>Tableau des redites</td><td>Proposer fusion, suppression ou renvoi</td><td>normale</td></tr>
+  <tr><td>T-07-004</td><td>Contrôler les recommandations</td><td>Tableau recommandation / constat / preuve</td><td>Chaque recommandation découle d’un constat</td><td>haute</td></tr>
+  <tr><td>T-07-005</td><td>Préparer les points à arbitrer en délibéré</td><td>Liste courte des points sensibles</td><td>Chaque point comporte enjeu, risque, option</td><td>normale</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>08 — Contradiction / RIOD</h2>
+  <table><tr><th>ID</th><th>Tâche vérificateur</th><th>Livrable</th><th>Contrôle qualité</th><th>Priorité</th></tr>
+  <tr><td>T-08-001</td><td>Recenser les réponses reçues</td><td>Registre des réponses REP</td><td>Chaque réponse a un ID et une origine</td><td>haute</td></tr>
+  <tr><td>T-08-002</td><td>Extraire les arguments par observation</td><td>Tableau arguments / OBS</td><td>Chaque argument est rattaché à une observation</td><td>haute</td></tr>
+  <tr><td>T-08-003</td><td>Identifier les pièces nouvelles</td><td>Liste des pièces nouvelles</td><td>Distinguer pièce nouvelle, pièce déjà connue, déclaration</td><td>haute</td></tr>
+  <tr><td>T-08-004</td><td>Préparer la matrice de contradiction</td><td>Matrice préremplie</td><td>Chaque ligne comporte observation, argument, pièce</td><td>haute</td></tr>
+  <tr><td>T-08-005</td><td>Repérer les passages à citer dans le RIOD</td><td>Liste d’extraits avec pages / ancres</td><td>Extraits courts, localisés, non redondants</td><td>normale</td></tr>
+  <tr><td>T-08-006</td><td>Contrôler les incidences ROP / ROD</td><td>Tableau modifications proposées</td><td>Chaque modification est rattachée à une réponse</td><td>normale</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>09 — Capitalisation</h2>
+  <table><tr><th>ID</th><th>Tâche vérificateur</th><th>Livrable</th><th>Contrôle qualité</th><th>Priorité</th></tr>
+  <tr><td>T-09-001</td><td>Recenser les retours de délibéré</td><td>Tableau retours / parties / motifs</td><td>Chaque retour est localisé</td><td>normale</td></tr>
+  <tr><td>T-09-002</td><td>Identifier les observations abandonnées ou fortement réduites</td><td>Liste des constats abandonnés / réduits</td><td>Rattacher chaque abandon à un motif</td><td>normale</td></tr>
+  <tr><td>T-09-003</td><td>Extraire les formulations robustes</td><td>Banque de formulations</td><td>Conserver contexte et limites d’usage</td><td>basse</td></tr>
+  <tr><td>T-09-004</td><td>Mettre à jour la liste des erreurs fréquentes</td><td>Fiche retour d’expérience</td><td>Distinguer erreur de méthode et arbitrage de dossier</td><td>normale</td></tr>
+  <tr><td>T-09-005</td><td>Proposer les prompts à améliorer</td><td>Liste des prompts concernés</td><td>Chaque proposition renvoie à un problème identifié</td><td>basse</td></tr></table>
+</section>
+</main>
+<footer>CRC Control Workflow</footer>
+</body>
+</html>
