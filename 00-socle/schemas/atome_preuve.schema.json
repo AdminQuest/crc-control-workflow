@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://adminquest.github.io/crc-control-workflow/schemas/atome_preuve.schema.json",
+  "title": "AtomePreuve",
+  "type": "object",
+  "required": ["id", "type", "contenu", "source_id", "niveau_preuve", "registres"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^ATOM-[0-9]{6}$"},
+    "type": {"type": "string", "enum": ["fait", "date", "montant", "declaration", "texte_juridique", "decision", "personne", "piece", "analyse_tiers"]},
+    "contenu": {"type": "string"},
+    "source_id": {"type": "string", "pattern": "^SRC-[0-9]{4}$"},
+    "localisation": {"type": "string", "description": "Page, paragraphe, cellule, horodatage ou autre localisation utile."},
+    "date_evenement": {"type": "string"},
+    "montant": {"type": "number"},
+    "unite": {"type": "string"},
+    "registres": {"type": "array", "items": {"type": "string"}},
+    "questions_controle": {"type": "array", "items": {"type": "string", "pattern": "^QC-[0-9]{3}$"}},
+    "niveau_preuve": {"type": "string", "enum": ["fort", "moyen", "faible", "declaratif"]},
+    "utilisable_rapport": {"type": "boolean"},
+    "limites": {"type": "string"}
+  }
+}
