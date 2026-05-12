@@ -3,49 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Suivi global des tâches</title>
+  <title>Suivi local des tâches</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/app.js" defer></script>
 </head>
 <body>
 <header>
-  <h1>Suivi global des tâches</h1>
-  <p>Tableau HTML de suivi opérationnel. Pour modifier durablement le suivi dans GitHub, reporter les ajouts dans <code>taches/suivi_taches_global.md</code>.</p>
+  <h1>Suivi local des tâches</h1>
+  <p>Tableau modifiable dans le navigateur. Les données sont conservées localement dans le navigateur utilisé.</p>
 </header>
 <nav>
   <a href="../index.html">Accueil</a>
   <a href="taches.html">Synthèse tâches</a>
   <a href="taches-detail.html">Tâches détaillées</a>
-  <a class="active" href="taches-suivi.html">Suivi global</a>
+  <a class="active" href="taches-suivi.html">Suivi local</a>
   <a href="tests-t01.html">Test T01</a>
 </nav>
 <main>
 <section class="card">
-  <h2>Comment ajouter une tâche</h2>
-  <p>Ajouter une ligne dans le tableau Markdown <code>taches/suivi_taches_global.md</code>. Pour une tâche propre à un contrôle, utiliser le prochain numéro disponible du module concerné. Exemple : <code>T-05-007</code>.</p>
+  <h2>Fonctionnement</h2>
+  <p>Ce suivi fonctionne sans serveur : les modifications sont stockées dans le <code>localStorage</code> du navigateur. Elles restent sur le poste et dans le navigateur utilisés. Pour conserver ou transférer le suivi, exporter en JSON, CSV ou Markdown.</p>
 </section>
+
+<section class="card">
+  <h2>Ajouter une tâche</h2>
+  <div class="form-grid">
+    <label>ID tâche<input id="new-id" placeholder="T-05-007"></label>
+    <label>Module<input id="new-module" placeholder="05-constats-arbitrage"></label>
+    <label>Intitulé<input id="new-title" placeholder="Contrôler la cohérence des montants"></label>
+    <label>Responsable<select id="new-owner"><option>vérificateur</option><option>rapporteur</option><option>binôme</option><option>président de section</option><option>ministère public</option><option>autre</option></select></label>
+    <label>Livrable<input id="new-deliverable" placeholder="Tableau d’écarts"></label>
+    <label>Priorité<select id="new-priority"><option>haute</option><option selected>normale</option><option>basse</option></select></label>
+    <label>Échéance<input id="new-due" type="date"></label>
+    <label>Commentaire<input id="new-comment" placeholder="Commentaire"></label>
+  </div>
+  <p><button class="copy" onclick="addTask()">Ajouter la tâche</button></p>
+</section>
+
+<section class="card">
+  <h2>Actions</h2>
+  <div class="toolbar">
+    <button class="copy" onclick="exportTasks('json')">Exporter JSON</button>
+    <button class="copy" onclick="exportTasks('csv')">Exporter CSV</button>
+    <button class="copy" onclick="exportTasks('md')">Exporter Markdown</button>
+    <button class="copy" onclick="resetTasks()">Réinitialiser</button>
+    <label>Importer JSON<input type="file" accept="application/json,.json" onchange="importTasksFromFile(this)"></label>
+  </div>
+</section>
+
 <section class="card">
   <h2>Tableau de suivi</h2>
-  <table>
-    <tr><th>ID tâche</th><th>Module</th><th>Intitulé</th><th>Responsable</th><th>Livrable attendu</th><th>Priorité</th><th>Statut</th><th>Échéance</th><th>Commentaire</th></tr>
-    <tr><td>T-01-001</td><td>01-cadrage</td><td>Recenser les pièces de cadrage disponibles</td><td>vérificateur</td><td>Liste des pièces disponibles et manquantes</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-01-002</td><td>01-cadrage</td><td>Préparer la fiche d’identité de l’organisme</td><td>vérificateur</td><td>Tableau identité organisme</td><td>normale</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-01-003</td><td>01-cadrage</td><td>Extraire les éléments du précédent contrôle</td><td>vérificateur</td><td>Tableau recommandations / suites apparentes</td><td>normale</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-01-004</td><td>01-cadrage</td><td>Préparer les premiers agrégats financiers</td><td>vérificateur</td><td>Tableau synthétique BP/BA sur la période</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-02-001</td><td>02-questionnaires</td><td>Transformer les lacunes documentaires en demandes de pièces</td><td>vérificateur</td><td>Tableau demandes de pièces</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-02-005</td><td>02-questionnaires</td><td>Contrôler la complétude des réponses reçues</td><td>vérificateur</td><td>Tableau complétude / relances</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-03-001</td><td>03-instruction-rag</td><td>Classer les sources reçues</td><td>vérificateur</td><td>Registre des sources SRC</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-03-003</td><td>03-instruction-rag</td><td>Extraire les montants significatifs</td><td>vérificateur</td><td>Registre des montants</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-03-005</td><td>03-instruction-rag</td><td>Produire les premiers atomes factuels</td><td>vérificateur</td><td>Table ATOM initiale</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-04-002</td><td>04-documents-maitres</td><td>Produire les tableaux financiers de base</td><td>vérificateur</td><td>Tableaux BP/BA/consolidé</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-04-004</td><td>04-documents-maitres</td><td>Lister les pièces manquantes par DM</td><td>vérificateur</td><td>Liste des pièces manquantes</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-05-002</td><td>05-constats-arbitrage</td><td>Vérifier les preuves principales de chaque piste</td><td>vérificateur</td><td>Tableau pistes / preuves</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-05-003</td><td>05-constats-arbitrage</td><td>Proposer les illustrations disponibles</td><td>vérificateur</td><td>Liste chiffres, exemples, tableaux, dates</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-06-001</td><td>06-integration-prompt-engine</td><td>Préparer les paquets de rédaction par partie</td><td>vérificateur</td><td>Paquets de rédaction préremplis</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-07-001</td><td>07-qualite-delibere</td><td>Contrôler la présence des preuves dans le DLRé</td><td>vérificateur</td><td>Tableau OBS / pièce DLRé</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-07-004</td><td>07-qualite-delibere</td><td>Contrôler les recommandations</td><td>vérificateur</td><td>Tableau recommandation / constat / preuve</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-08-004</td><td>08-contradiction-riod</td><td>Préparer la matrice de contradiction</td><td>vérificateur</td><td>Matrice préremplie</td><td>haute</td><td>à faire</td><td></td><td></td></tr>
-    <tr><td>T-09-004</td><td>09-capitalisation</td><td>Mettre à jour la liste des erreurs fréquentes</td><td>vérificateur</td><td>Fiche retour d’expérience</td><td>normale</td><td>à faire</td><td></td><td></td></tr>
-  </table>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Module</th><th>Intitulé</th><th>Responsable</th><th>Livrable</th><th>Priorité</th><th>Statut</th><th>Échéance</th><th>Commentaire</th><th>Action</th></tr>
+      </thead>
+      <tbody id="tasks-body"></tbody>
+    </table>
+  </div>
 </section>
 </main>
 <footer>CRC Control Workflow</footer>
