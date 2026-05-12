@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://adminquest.github.io/crc-control-workflow/schemas/constat_deliberable.schema.json",
+  "title": "ConstatDeliberable",
+  "type": "object",
+  "required": ["id", "constat", "atomes_mobilises", "significativite", "decision"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^CONST-[0-9]{4}$"},
+    "constat": {"type": "string"},
+    "question_controle": {"type": "string", "pattern": "^QC-[0-9]{3}$"},
+    "atomes_mobilises": {"type": "array", "items": {"type": "string", "pattern": "^ATOM-[0-9]{6}$"}},
+    "preuve_principale": {"type": "string"},
+    "illustration_obligatoire": {"type": "string"},
+    "portee": {"type": "array", "items": {"type": "string", "enum": ["financiere", "regularite", "gouvernance", "performance", "patrimoine", "risque", "deontologie", "commande_publique", "ressources_humaines", "organisation"]}},
+    "significativite": {"type": "string", "enum": ["centrale", "utile", "secondaire", "annexe", "abandon"]},
+    "limites_probatoires": {"type": "string"},
+    "arguments_contraires": {"type": "string"},
+    "domiciliation": {"type": "string", "description": "Partie unique du rapport ou annexe."},
+    "effet_attendu": {"type": "string", "enum": ["observation", "recommandation", "rappel_du_droit", "contexte", "annexe", "abandon", "suite_separee"]},
+    "decision": {"type": "string", "enum": ["garder", "reduire", "deplacer", "annexer", "completer", "abandonner"]}
+  }
+}
