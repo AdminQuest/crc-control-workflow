@@ -151,3 +151,45 @@ footer {
   padding: 22px 36px;
   font-size: .9rem;
 }
+
+input, select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 8px;
+  background: #fff;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: end;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.form-grid label {
+  font-size: .88rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.table-wrap { overflow-x: auto; }
+
+#tasks-body input, #tasks-body select {
+  min-width: 120px;
+  font-size: .86rem;
+}
+
+#tasks-body td:nth-child(3) input,
+#tasks-body td:nth-child(5) input,
+#tasks-body td:nth-child(9) input {
+  min-width: 240px;
+}
