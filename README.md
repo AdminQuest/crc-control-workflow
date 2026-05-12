@@ -4,6 +4,26 @@ Chaîne méthodologique reproductible pour conduire un contrôle des comptes et 
 
 Ce dépôt ne remplace pas `crc-prompt-engine`. Il intervient en amont et autour de lui : il structure le contrôle, les sources, les constats et les arbitrages ; `crc-prompt-engine` reste l’outil de rédaction et de réécriture.
 
+## Accès navigateur
+
+Page d’accueil web :
+
+```text
+index.html
+```
+
+Page de test du premier cycle :
+
+```text
+web/tests-t01.html
+```
+
+Page de suivi des tâches :
+
+```text
+web/taches.html
+```
+
 ## Logique générale
 
 ```text
@@ -17,6 +37,21 @@ Ce dépôt ne remplace pas `crc-prompt-engine`. Il intervient en amont et autour
 07-qualite-delibere              audit pré-dépôt et simulation de pré-délibéré
 08-contradiction-riod            traitement de la contradiction, RIOD, ROD
 09-capitalisation                retours d’expérience et amélioration de la méthode
+taches                           index transversal de la gestion des tâches
+```
+
+## Gestion des tâches
+
+La gestion des tâches a été ajoutée à trois niveaux :
+
+1. modèle commun : `00-socle/modeles/table_suivi_taches.md` ;
+2. schéma commun : `00-socle/schemas/tache_workflow.schema.json` ;
+3. tâches par module : `*/taches/taches_verificateur.md`.
+
+Un index dédié est disponible dans :
+
+```text
+taches/README.md
 ```
 
 ## Principe directeur
@@ -33,8 +68,9 @@ Les objets centraux du dépôt sont :
 - `DocumentMaitre` : analyse thématique alimentée par les atomes ;
 - `ConstatDeliberable` : constat susceptible d’être porté au rapport ;
 - `PaquetRedaction` : entrée propre à transmettre à `crc-prompt-engine` ;
-- `ReponseContradictoire` : argument ou pièce transmis en contradiction.
+- `ReponseContradictoire` : argument ou pièce transmis en contradiction ;
+- `TacheWorkflow` : tâche suivie dans un module du workflow.
 
 ## Version initiale
 
-La première version stabilise le socle, le cadrage, les questionnaires, l’arbitrage des constats et l’intégration avec `crc-prompt-engine`. Les modules RAG et contradiction pourront ensuite être approfondis.
+La première version stabilise le socle, le cadrage, les questionnaires, l’arbitrage des constats, l’intégration avec `crc-prompt-engine` et le suivi des tâches. Les modules RAG et contradiction pourront ensuite être approfondis.
