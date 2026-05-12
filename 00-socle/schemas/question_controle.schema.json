@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://adminquest.github.io/crc-control-workflow/schemas/question_controle.schema.json",
+  "title": "QuestionControle",
+  "type": "object",
+  "required": ["id", "libelle", "risques_associes", "priorite", "statut"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^QC-[0-9]{3}$"},
+    "libelle": {"type": "string"},
+    "origine": {"type": "string", "description": "Fiche de programmation, lettre d'ouverture, entretien d'ouverture, analyse financière, signalement, etc."},
+    "risques_associes": {"type": "array", "items": {"type": "string"}},
+    "hypotheses": {"type": "array", "items": {"type": "string"}},
+    "donnees_attendues": {"type": "array", "items": {"type": "string"}},
+    "pieces_attendues": {"type": "array", "items": {"type": "string"}},
+    "priorite": {"type": "string", "enum": ["centrale", "utile", "secondaire", "hors_champ"]},
+    "statut": {"type": "string", "enum": ["ouverte", "a_completer", "couverte", "abandonnee"]},
+    "commentaire": {"type": "string"}
+  }
+}
